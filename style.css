@@ -1,15 +1,36 @@
 * {
-  margin: 0 auto;
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  background-image: url(https://i.pinimg.com/originals/f1/63/11/f16311fd0c32786525f471c685bc516e.gif);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  font-size: 32px;
+}
+
+#title {
+  align-items: center;
+  justify-content: center;
+  margin: 35px auto;
+  text-shadow: 0 0 15px white;
 }
 
 #color-palette {
   display: flex;
+  justify-content: center;
 }
 
 .color {
   height: 100px;
   width: 100px;
   border: solid 1px black;
+  margin: 20px;
+
 }
 
 .black {
@@ -28,11 +49,29 @@
   background-color: pink;
 }
 
+#btn-interacao {
+  text-align: center;
+}
+
+#clear-board {
+  width: 10%;
+  margin: 20px auto;
+}
+
+#board-size {
+  width: 9.4%;
+  margin: 20px auto;
+}
+
+#generate-board {
+  width: 10%;
+  margin: 20px auto;
+}
+
 #pixel-board {
   display: table;
   border: black solid 1px;
-  margin-top: 5em;
-  margin-bottom: 5em;
+  margin: 20px auto;
 }
 
 .border {
@@ -50,4 +89,22 @@
   height: 40px;
   width: 40px;
   background-color: white;
+}
+
+#lofi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#lofi h2 {
+  margin: 10px;
+  text-shadow: 0 0 15px white;
+}
+
+#lofi iframe {
+  margin: 8px;
+  border-radius: 8px;
 }

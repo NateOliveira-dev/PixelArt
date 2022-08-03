@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Pixels Art</title>
 </head>
@@ -18,19 +21,14 @@
             <div class="color yellow"></div>
             <div class="color pink"></div>
         </div>
-        <button id="clear-board">Limpar</button>
-        <input type="number" id="board-size" min="1" max="50">
-        <button id="generate-board">VQV</button>
+        <div id="btn-interacao">
+            <button id="clear-board">Limpar</button>
+            <input type="number" id="board-size" min="1" max="50">
+            <button id="generate-board">VQV</button>
+        </div>
     </div>
     <div id="pixel-board">
         <div class="collumn border">
-          <div class="pixel border"></div>
-          <div class="pixel border"></div>
-          <div class="pixel border"></div>
-          <div class="pixel border"></div>
-          <div class="pixel border"></div>
-        </div>
-        <div class="collumn border">
             <div class="pixel border"></div>
             <div class="pixel border"></div>
             <div class="pixel border"></div>
@@ -58,6 +56,20 @@
             <div class="pixel border"></div>
             <div class="pixel border"></div>
         </div>
+        <div class="collumn border">
+            <div class="pixel border"></div>
+            <div class="pixel border"></div>
+            <div class="pixel border"></div>
+            <div class="pixel border"></div>
+            <div class="pixel border"></div>
+        </div>
+    </div>
+    <div id="lofi">
+        <h2>Escute um lo-fi enquanto faz sua arte!</h2>
+        <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
     </div>
     <script src="script.js"></script>
 </body>
