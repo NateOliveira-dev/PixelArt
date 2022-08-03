@@ -17,3 +17,13 @@ function removeOrAddClass(element) {
 
 const chosenPalette = document.querySelector('#color-palette');
 chosenPalette.addEventListener('click', removeOrAddClass);
+
+function colorPixel(element) {
+    const aimElement = element.target;
+    const catchClass = document.getElementsByClassName('selected')[0];
+    const picketColor = getComputedStyle(catchClass).backgroundColor;
+    aimElement.style.backgroundColor = picketColor;
+}
+
+const selectColors = document.querySelector('#pixel-board');
+selectColors.addEventListener('click', colorPixel);
