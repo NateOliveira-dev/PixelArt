@@ -27,3 +27,15 @@ function colorPixel(element) {
 
 const selectColors = document.querySelector('#pixel-board');
 selectColors.addEventListener('click', colorPixel);
+
+function pixelclean() {
+    const btnClear = document.querySelector('#clear-board');
+    btnClear.addEventListener('click', () => {
+        const board = document.querySelectorAll('.pixel');
+        for (let i = 0; i < board.length; i += 1) {
+            board[i].style.backgroundColor = 'white';
+        }
+    });
+}
+
+pixelclean();
