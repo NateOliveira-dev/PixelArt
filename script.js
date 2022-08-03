@@ -39,29 +39,29 @@ function pixelclean() {
 pixelclean();
 
 let newBoardSize = 0;
-  function vqvBoardSize() {
+function vqvBoardSize() {
     const newTable = document.querySelector('#pixel-board');
     newTable.innerHTML = '';
-  
+
     for (let i = 0; i < newBoardSize; i += 1) {
-      const newDivTable = document.createElement('div');
-      newTable.appendChild(newDivTable);
-      newDivTable.className = 'column border';
-  
-      for (let j = 0; j < newBoardSize; j += 1) {
-        const squarePixel = document.createElement('div');
-        newDivTable.appendChild(squarePixel);
-        squarePixel.className = 'pixel border';
-      }
+        const newDivTable = document.createElement('div');
+        newTable.appendChild(newDivTable);
+        newDivTable.className = 'column border';
+
+        for (let j = 0; j < newBoardSize; j += 1) {
+            const squarePixel = document.createElement('div');
+            newDivTable.appendChild(squarePixel);
+            squarePixel.className = 'pixel border';
+        }
     }
-  }
-  const newBoardBtn = document.getElementById('generate-board');
-  newBoardBtn.addEventListener('click', () => {
+}
+const newBoardBtn = document.getElementById('generate-board');
+newBoardBtn.addEventListener('click', () => {
     newBoardSize = document.getElementById('board-size').value;
-  
+
     if (newBoardSize.length === 0) {
-      alert('Board inválido!');
-      newBoardSize = 5;
+        alert('Board inválido!');
+        newBoardSize = 5;
     } else if (newBoardSize < 5) {
         newBoardSize = 5;
     } else if (newBoardSize > 50) {
@@ -69,4 +69,19 @@ let newBoardSize = 0;
     }
     vqvBoardSize();
     console.log(newBoardSize);
-  });
+});
+
+let colorFirst = document.getElementsByClassName('purple')[0];
+let secondColor = document.getElementsByClassName('yellow')[0];
+let thirdColor = document.getElementsByClassName('pink')[0];
+
+function randomColor() {
+    let randomFirstColor = Math.ceil(Math.random() * 255);
+    let randomSecondColor = Math.ceil(Math.random() * 255);
+    let randomThirdColor = Math.ceil(Math.random() * 255);
+
+    return `rgb(${randomFirstColor}, ${randomSecondColor}, ${randomThirdColor})`;
+}
+colorFirst.style.backgroundColor = randomColor();
+secondColor.style.backgroundColor = randomColor();
+thirdColor.style.backgroundColor = randomColor();
