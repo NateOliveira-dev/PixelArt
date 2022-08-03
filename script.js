@@ -2,7 +2,6 @@ function firstColor() {
     const cor = document.querySelector('.black');
     cor.classList.add('selected');
 }
-
 firstColor();
 
 function removeOrAddClass(element) {
@@ -37,5 +36,37 @@ function pixelclean() {
         }
     });
 }
-
 pixelclean();
+
+let newBoardSize = 0;
+  function vqvBoardSize() {
+    const newTable = document.querySelector('#pixel-board');
+    newTable.innerHTML = '';
+  
+    for (let i = 0; i < newBoardSize; i += 1) {
+      const newDivTable = document.createElement('div');
+      newTable.appendChild(newDivTable);
+      newDivTable.className = 'column border';
+  
+      for (let j = 0; j < newBoardSize; j += 1) {
+        const squarePixel = document.createElement('div');
+        newDivTable.appendChild(squarePixel);
+        squarePixel.className = 'pixel border';
+      }
+    }
+  }
+  const newBoardBtn = document.getElementById('generate-board');
+  newBoardBtn.addEventListener('click', () => {
+    newBoardSize = document.getElementById('board-size').value;
+  
+    if (newBoardSize.length === 0) {
+      alert('Board inválido!');
+      newBoardSize = 5;
+    } else if (newBoardSize < 5) {
+        newBoardSize = 5;
+    } else if (newBoardSize > 50) {
+        newBoardSize = 50;
+    }
+    vqvBoardSize();
+    console.log(newBoardSize);
+  });
